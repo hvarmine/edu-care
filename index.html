@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduCare | Login</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Inter',sans-serif;
+    }
+
+    body{
+      min-height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      background:linear-gradient(135deg,#2563EB,#60A5FA,#E0F2FE);
+      overflow:hidden;
+    }
+
+    .circle{
+      position:absolute;
+      border-radius:50%;
+      filter:blur(80px);
+      opacity:.35;
+      animation:float 8s ease-in-out infinite;
+    }
+
+    .c1{
+      width:300px;
+      height:300px;
+      background:#ffffff;
+      top:-60px;
+      left:-70px;
+    }
+
+    .c2{
+      width:250px;
+      height:250px;
+      background:#93C5FD;
+      bottom:-70px;
+      right:-40px;
+      animation-delay:2s;
+    }
+
+    @keyframes float{
+      0%,100%{transform:translateY(0px);}
+      50%{transform:translateY(25px);}
+    }
+
+    .login-card{
+      width:390px;
+      backdrop-filter:blur(18px);
+      background:rgba(255,255,255,.18);
+      border:1px solid rgba(255,255,255,.35);
+      border-radius:28px;
+      padding:35px;
+      box-shadow:0 20px 60px rgba(0,0,0,.18);
+      color:white;
+      z-index:5;
+    }
+
+    .logo{
+      width:78px;
+      height:78px;
+      border-radius:22px;
+      background:rgba(255,255,255,.25);
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      font-size:36px;
+      margin:auto;
+      margin-bottom:18px;
+      box-shadow:0 10px 25px rgba(255,255,255,.2);
+    }
+
+    h1{
+      text-align:center;
+      font-size:34px;
+      font-weight:800;
+      margin-bottom:8px;
+    }
+
+    p{
+      text-align:center;
+      opacity:.9;
+      font-size:14px;
+      margin-bottom:25px;
+      line-height:1.5;
+    }
+
+    .role-select{
+      display:flex;
+      gap:10px;
+      margin-bottom:22px;
+    }
+
+    .role{
+      flex:1;
+      padding:10px;
+      text-align:center;
+      border-radius:14px;
+      background:rgba(255,255,255,.15);
+      cursor:pointer;
+      transition:.25s;
+      font-size:13px;
+    }
+
+    .role.active{
+      background:white;
+      color:#2563EB;
+      font-weight:700;
+    }
+
+    .input-group{
+      margin-bottom:16px;
+    }
+
+    label{
+      font-size:13px;
+      display:block;
+      margin-bottom:8px;
+      font-weight:500;
+    }
+
+    input{
+      width:100%;
+      padding:15px;
+      border:none;
+      outline:none;
+      border-radius:16px;
+      background:rgba(255,255,255,.28);
+      color:white;
+      font-size:15px;
+    }
+
+    input::placeholder{
+      color:#E0ECFF;
+    }
+
+    .forgot{
+      text-align:right;
+      margin-bottom:22px;
+      font-size:12px;
+      opacity:.9;
+      cursor:pointer;
+    }
+
+    button{
+      width:100%;
+      padding:16px;
+      border:none;
+      border-radius:18px;
+      background:white;
+      color:#2563EB;
+      font-size:16px;
+      font-weight:700;
+      cursor:pointer;
+      transition:.3s;
+    }
+
+    button:hover{
+      transform:translateY(-2px);
+      box-shadow:0 10px 25px rgba(255,255,255,.25);
+    }
+
+    .divider{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      margin:24px 0;
+      color:white;
+      font-size:13px;
+      opacity:.8;
+    }
+
+    .divider::before,
+    .divider::after{
+      content:"";
+      flex:1;
+      height:1px;
+      background:rgba(255,255,255,.3);
+    }
+
+    .register{
+      text-align:center;
+      font-size:14px;
+    }
+
+    .register a{
+      color:#fff;
+      font-weight:700;
+      text-decoration:none;
+    }
+
+    .footer{
+      margin-top:28px;
+      text-align:center;
+      font-size:12px;
+      opacity:.7;
+    }
+
+    @media(max-width:450px){
+      .login-card{
+        width:92%;
+        padding:28px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="circle c1"></div>
+<div class="circle c2"></div>
+
+<div class="login-card">
+
+  <div class="logo">🎓</div>
+
+  <h1>EduCare</h1>
+
+  <p>
+    Ավելի խելացի սովորիր։ Բարելավիր գիտելիքներդ ամեն օր։
+  </p>
+
+  <div class="role-select">
+    <div class="role active">👨‍🎓 Աշակերտ</div>
+    <div class="role">👩‍🏫 Ուսուցիչ</div>
+  </div>
+
+  <div class="input-group">
+    <label>EduCare ID</label>
+    <input type="text" placeholder="Օրինակ՝ EDU-2026-001245">
+  </div>
+
+  <div class="input-group">
+    <label>Գաղտնաբառ</label>
+    <input type="password" placeholder="••••••••">
+  </div>
+
+  <div class="forgot">Մոռացե՞լ եք գաղտնաբառը։</div>
+
+  <button>Մուտք գործել</button>
+
+  <div class="divider">կամ</div>
+
+  <div class="register">
+    Առաջին անգամ ե՞ք այստեղ։
+    <a href="#">Ստեղծել հաշիվ</a>
+  </div>
+
+  <div class="footer">
+    © 2026 EduCare Education Platform
+  </div>
+
+</div>
+
+<script>
+  const roles=document.querySelectorAll('.role');
+
+  roles.forEach(role=>{
+    role.addEventListener('click',()=>{
+      roles.forEach(r=>r.classList.remove('active'));
+      role.classList.add('active');
+    });
+  });
+</script>
+
+</body>
+</html>
